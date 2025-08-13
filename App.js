@@ -4,9 +4,8 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      {/* HEADER */}
       <View style={styles.header}>
-        <Text>Logo</Text>
+        <Text style={styles.titleHeader}>Logo</Text>
         <View style={styles.menu} />
       </View>
 
@@ -31,7 +30,8 @@ export default function App() {
           <View style={styles.textContainer}>
             <Text style={styles.titleCard}>Título</Text>
             <Text style={styles.p}>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
           </View>
         </View>
@@ -44,22 +44,22 @@ export default function App() {
           <View style={styles.textContainer}>
             <Text style={styles.titleCard}>Título</Text>
             <Text style={styles.p}>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
           </View>
         </View>
-      </View>
 
-      <View style={styles.fim}>
-        <Text>Ler Mais</Text>
+        <View style={styles.lerMais}>
+          <Text style={{ color: '#B4C4D9', fontSize: 18, }}>Ler Mais</Text>
+        </View>
+      
       </View>
 
       {/* FOOTER */}
       <View style={styles.footer}>
-        <Text style={{ color: '#f4f4f4' }}>Footer</Text>
+        <Text style={{ color: '#f4f4f4', fontWeight: 'bold', fontSize: 14, }}>Footer</Text>
       </View>
-
-      
 
     </View>
   )
@@ -72,43 +72,49 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    flex: 2,
+    flex: 3,
     width: '100%',
-    backgroundColor: '#6C63FF',
+    backgroundColor: '#333259',
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
     paddingHorizontal: 20,
   },
 
+  titleHeader: {
+    color: '#B4C4D9',
+    fontSize: 30,
+    fontWeight: 'bold',
+  },
+
   content: {
-    flex: 3, // evita que estique demais
+    flex: 4, 
     width: '100%',
-    backgroundColor: '#F9F9F9',
+    backgroundColor: '#B4C4D9',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
+    padding: 5,
   },
 
   menu: {
-    width: 40,
-    height: 40,
-    backgroundColor: '#ffff',
+    width: 60,
+    height: 60,
+    backgroundColor: '#B4C4D9',
   },
 
   containerCard: {
-    flexDirection: 'row', // imagem e texto lado a lado
+    flexDirection: 'row', 
     backgroundColor: '#F2f2f2',
     padding: 20,
     borderRadius: 10,
-    alignItems: 'flex-start', // alinha topo da imagem com topo do texto
-    marginBottom: 10,
+    alignItems: 'center', 
+    marginBottom: 30,
     maxWidth: 350,
   },
 
   imageCard: {
-    width: 50,
-    height: 50,
+    width: 60,
+    height: 60,
     backgroundColor: 'black',
     marginRight: 15,
     borderRadius: 6,
@@ -130,17 +136,22 @@ const styles = StyleSheet.create({
   },
 
   footer: {
+    flex: 2,
+    width: '100%',
     height: 50,
     backgroundColor: '#333333',
     justifyContent: 'center',
     alignItems: 'center',
   },
 
-  fim: {
-    backgroundColor: '#333333',
-    color: 'whitesmoke',
-    fontWeight: 'bold',
-    fontSize: 14,
+  lerMais: {
+    backgroundColor: '#54678C',
     padding: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    maxWidth: 100, 
+    marginBottom: 10,
   }
 });
