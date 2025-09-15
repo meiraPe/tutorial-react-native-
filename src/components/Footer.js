@@ -1,25 +1,24 @@
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native'
 
-export default Footer = () => {
+function Footer() {
   return (
     <View style={styles.footer}>
-      <Text style={styles.footerText}>Pedro Meira</Text>
+        <Text style={styles.ftext}>@ Pedro Meira</Text>
     </View>
-  );
+  )
 }
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   footer: {
-    backgroundColor: '#333259',
-    padding: 20,
-    alignItems: 'center',
+    flex: 2,
+    width: "100%",
+    backgroundColor: "#000000ff",
     justifyContent: 'center',
-    width: '100%',
+    alignItems: 'center'
   },
-  footerText: {
-    color: '#B4C4D9',
-    fontSize: 14,
-    fontWeight: 'bold',
-  },
-});
+  ftext:{
+    color: "#FFF"
+  }
+})  
 
+export default Footer

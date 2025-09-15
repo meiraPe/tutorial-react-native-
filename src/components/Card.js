@@ -1,62 +1,42 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native'
+import {Image} from 'expo-image'
 
-export default function Card() {
+function Card({title, desc, img}) {
+
   return (
-        <View style={styles.content}>
-          <View style={styles.containerCard}>
-            <View style={styles.imageCard} />
-            <View style={styles.textContainer}>
-              <Text style={styles.titleCard}>Título</Text>
-              <Text style={styles.p}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </Text>
-            </View>
-          </View>
-        </View>
-  );
+    <View style={styles.card}>
+      <Image 
+        style={styles.image}
+        source={img}
+      />
+      <View style={styles.info}>
+        <Text style={styles.h1}>{title}</Text>
+        <Text>{desc}</Text>
+      </View>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
-    content: {
-    flex: 4, 
-    width: '100%',
-    backgroundColor: '#B4C4D9',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 5,
+  card: {
+    padding: 10,
+    flexDirection: 'row',
+    gap: 15,
+    backgroundColor: "#b8eef0ff"
   },
-
-    containerCard: {
-    flexDirection: 'row', 
-    backgroundColor: '#F2f2f2',
-    padding: 20,
-    borderRadius: 10,
-    alignItems: 'center', 
-    marginBottom: 10,
-    maxWidth: 350,
-  },
-
-  imageCard: {
-    width: 60,
+  image: {
+    width: 50,
     height: 60,
-    backgroundColor: 'black',
-    marginRight: 15,
-    borderRadius: 6,
+    backgroundColor: "#000"
   },
-
-  textContainer: {
+  info: {
     flex: 1,
     flexDirection: 'column',
   },
+  h1: {
+    fontSize: 20,
+    fontWeight: 'bold'
+  }
+})
 
-  titleCard: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 5,
-  },
-
-  p: {
-    textAlign: 'left',
-  },
-});
+export default Card
